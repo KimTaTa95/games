@@ -1,2 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="14" y="130">
+            <group eventID="1" id="-1">
+                <set-val-1-3 comment="false" x="25" y="155">
+                    <int id="0" val="3"/>
+                </set-val-1-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="3" id="0">
+        <step comment="false" x="0" y="125">
+            <group eventID="3" id="-1">
+                <if comment="false" x="11" y="150">
+                    <group eventID="3" id="-1">
+                        <play-sound4 comment="false" x="22" y="180">
+                            <int id="0" val="0"/>
+                            <sound eid="9" id="1"/>
+                        </play-sound4>
+                        <die comment="false" x="22" y="207">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-val-1-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </lesseq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-custom comment="false" x="2" y="117">
+            <group eventID="4" id="-1">
+                <incdec comment="false" x="13" y="142">
+                    <int id="0" val="3"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="1"/>
+                </incdec>
+                <apply-filter comment="false" x="13" y="169">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-negative comment="false" id="1" x="0" y="0"/>
+                </apply-filter>
+                <periodic comment="false" x="13" y="201">
+                    <group eventID="4" id="-1">
+                        <clear-filter comment="false" x="24" y="228">
+                            <ACTOR eid="this" id="0"/>
+                        </clear-filter>
+                    </group>
+                    <int id="0" val=".1"/>
+                    <ACTOR eid="this" id="2"/>
+                </periodic>
+            </group>
+            <int id="0" val="Hit"/>
+        </event-custom>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

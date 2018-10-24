@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <init comment="false" x="15" y="15">
+        <init comment="false" x="0" y="101">
             <group eventID="1" id="-1">
-                <play-sound4 comment="false" x="26" y="40">
+                <play-sound4 comment="false" x="11" y="126">
                     <int id="0" val="0"/>
                     <sound eid="10" id="1"/>
                 </play-sound4>
@@ -11,4 +11,12 @@
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-group-create-kill comment="false" x="0" y="87">
+            <group eventID="2" id="-1"/>
+            <int id="0" val="1"/>
+            <actorgroup eid="3" id="1"/>
+        </event-group-create-kill>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>
