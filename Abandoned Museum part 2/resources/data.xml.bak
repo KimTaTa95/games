@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<pack/>
+<pack>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="0" name="Middle of Nowhere" numframes="1" oid="-1" repeats="true" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
+</pack>
