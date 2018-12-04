@@ -42,14 +42,16 @@
         <blocks/>
         <events>
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Jump" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Jump " enabled="true" id="3" name="step" order="4" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="4" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="false"/>
-            <event displayName="Jump" enabled="true" id="2" name="step" order="2" repeats="false"/>
+            <event displayName="Jump " enabled="true" id="3" name="step" order="4" repeats="false"/>
+            <event displayName="Updating" enabled="true" id="4" name="step" order="2" repeats="false"/>
         </events>
     </snippet>
     <snippet actorid="10" attachedevent="true" class="scripts.ActorEvents_10" classname="scripts.ActorEvents_10" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="11" name="ActorEvents_10" oid="-1" package="scripts." shared="false" type="actor">
