@@ -64,19 +64,37 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="11" y="146">
                     <group eventID="2" id="-1">
-                        <set-dxy comment="false" x="22" y="179">
+                        <set-dxy comment="false" x="22" y="184">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="-40"/>
+                            <int id="2" val="-20"/>
                         </set-dxy>
+                        <set-val-9-2 comment="false" x="22" y="211">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-9-2>
                     </group>
-                    <keystate comment="false" id="0" x="0" y="0">
-                        <int id="0" val="0"/>
-                        <control eid="0" id="1"/>
-                    </keystate>
+                    <and comment="false" id="0" x="0" y="0">
+                        <keystate comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <control eid="0" id="1"/>
+                        </keystate>
+                        <eq comment="false" id="1" x="0" y="0">
+                            <get-val-9-2 comment="false" id="0" x="0" y="0"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </eq>
+                    </and>
                 </if>
             </group>
         </step>
+    </group>
+    <group eventID="3" id="7">
+        <push-shove comment="false" x="56" y="309">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="0"/>
+            <int id="3" val="-1"/>
+            <int id="4" val="10"/>
+        </push-shove>
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
@@ -137,4 +155,16 @@
         </step>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-collide-actortogroup comment="false" x="0" y="95">
+            <group eventID="5" id="-1">
+                <set-val-9-2 comment="false" x="11" y="127">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-9-2>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actorgroup eid="1" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

@@ -39,11 +39,14 @@
         </events>
     </snippet>
     <snippet actorid="6" attachedevent="true" class="scripts.ActorEvents_6" classname="scripts.ActorEvents_6" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="9" name="ActorEvents_6" oid="-1" package="scripts." shared="false" type="actor">
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Touch Floor" hidden="false" id="1" name="_TouchFloor" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="touch floor" hidden="false" id="2" name="_touchfloor" order="1"/>
         <blocks/>
         <events>
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="Jump " enabled="true" id="3" name="step" order="4" repeats="true"/>
             <event displayName="Updating" enabled="true" id="4" name="step" order="2" repeats="true"/>
+            <event displayName="Actor - Group" enabled="true" id="5" name="event-collide-actortogroup" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
