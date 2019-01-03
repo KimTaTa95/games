@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <event-actor-region comment="false" x="0" y="87">
+            <group eventID="1" id="-1">
+                <scene-change-through comment="false" x="11" y="114">
+                    <scene eid="7" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2"/>
+                </scene-change-through>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="0" id="1"/>
+            <ACTOR eid="1" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
