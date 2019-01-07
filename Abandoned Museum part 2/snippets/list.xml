@@ -53,11 +53,14 @@
         <blocks/>
         <events>
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Jump " enabled="true" id="3" name="step" order="6" repeats="true"/>
-            <event displayName="Screen" enabled="false" id="4" name="step" order="4" repeats="true"/>
-            <event displayName="Touch Floor" enabled="true" id="5" name="event-collide-actortogroup" order="7" repeats="false"/>
-            <event displayName="Die in Pit and Reload" enabled="true" id="6" name="step" order="3" repeats="true"/>
-            <event displayName="Created" enabled="true" id="7" name="init" order="2" repeats="true"/>
+            <event displayName=" Jump #1" enabled="true" id="3" name="step" order="7" repeats="true"/>
+            <event displayName="Screen" enabled="true" id="4" name="step" order="5" repeats="true"/>
+            <event displayName="Touch Floor #1" enabled="true" id="5" name="event-collide-actortogroup" order="9" repeats="false"/>
+            <event displayName="Die in Pit and Reload" enabled="true" id="6" name="step" order="4" repeats="true"/>
+            <event displayName="Created" enabled="true" id="7" name="init" order="3" repeats="true"/>
+            <event displayName="Release Jumps" enabled="true" id="8" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Jump #2" enabled="true" id="9" name="step" order="8" repeats="true"/>
+            <event displayName="Touching Floor" enabled="true" id="10" name="event-collide-actortogroup" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">

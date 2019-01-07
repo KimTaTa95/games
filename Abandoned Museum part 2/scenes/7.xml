@@ -9,7 +9,7 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="0" id="6" name="Azazel Statue 1" sx="1.0" sy="1.0" x="61" y="77" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="0" id="6" name="Azazel Statue 1" sx="1.0" sy="1.0" x="3963" y="136" z="0"/>
     </actors>
     <snippets/>
     <terrain>
