@@ -66,10 +66,10 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="-1" id="1" name="JumpTimes" save="true" value="0"/>
+        <number cid="-1" id="1" name="JumpTimes" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="Jump Times" save="true" value="false"/>
         <boolean cid="-1" id="3" name="Touching Floor" save="true" value="true"/>
-        <number cid="-1" id="2" name="TouchingFloor" save="true" value="0"/>
+        <number cid="-1" id="2" name="TouchingFloor" save="true" value="0.0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

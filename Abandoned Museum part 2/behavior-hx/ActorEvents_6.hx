@@ -110,18 +110,6 @@ class ActorEvents_6 extends ActorScript
 			}
 		});
 		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("up", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && released)
-			{
-				if((1 == Engine.engine.getGameAttribute("Jump Times")))
-				{
-					Engine.engine.setGameAttribute("JumpTimes", 2);
-				}
-			}
-		});
-		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
@@ -164,30 +152,6 @@ class ActorEvents_6 extends ActorScript
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((true == Engine.engine.getGameAttribute("Touching Floor")))
-				{
-					if(isKeyDown("up"))
-					{
-						actor.setYVelocity(-30);
-						if((0 == Engine.engine.getGameAttribute("JumpTimes")))
-						{
-							Engine.engine.setGameAttribute("JumpTimes", Engine.engine.getGameAttribute("JumpTimes"));
-						}
-						if((2 == Engine.engine.getGameAttribute("JumpTimes")))
-						{
-							actor.setYVelocity(-80);
-							Engine.engine.setGameAttribute("Touching Floor", false);
-						}
-					}
-				}
-			}
-		});
-		
 		/* ======================= Member of Group ======================== */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
@@ -197,18 +161,6 @@ class ActorEvents_6 extends ActorScript
 				{
 					_touchfloor = true;
 					propertyChanged("_touchfloor", _touchfloor);
-				}
-			}
-		});
-		
-		/* ======================= Member of Group ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorGroup(1),event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				if((1 == Engine.engine.getGameAttribute("JumpTimes")))
-				{
-					Engine.engine.setGameAttribute("JumpTimes", 2);
 				}
 			}
 		});
