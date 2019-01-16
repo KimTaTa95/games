@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,25 +69,97 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_0 extends SceneScript
+class ActorEvents_2 extends ActorScript
 {
+	public var _TouchFloor:Bool;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
+		nameMap.set("Touch Floor", "_TouchFloor");
+		_TouchFloor = false;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		engine.cameraFollow(actor);
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
+			if(wrapper.enabled)
 			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
+				if(isKeyDown("left"))
+				{
+					actor.setXVelocity(-15);
+				}
+				else if(isKeyDown("right"))
+				{
+					actor.setXVelocity(15);
+				}
+				else
+				{
+					actor.setXVelocity(0);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((getScreenHeight() < actor.getY()))
+				{
+					reloadCurrentScene(null, createCrossfadeTransition(.5));
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((actor.getScreenX() < 0))
+				{
+					actor.setX(1);
+				}
+				else if((actor.getScreenY() > (getScreenWidth() - (actor.getWidth()))))
+				{
+					actor.setX(((getScreenWidth() - (actor.getWidth())) - 1));
+				}
+			}
+		});
+		
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorGroup(1),event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if((event.otherFromTop && event.thisFromTop))
+				{
+					_TouchFloor = true;
+					propertyChanged("_TouchFloor", _TouchFloor);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((isKeyDown("up") && (_TouchFloor == true)))
+				{
+					actor.setYVelocity(-20);
+					_TouchFloor = false;
+					propertyChanged("_TouchFloor", _TouchFloor);
+				}
 			}
 		});
 		
