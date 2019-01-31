@@ -6,13 +6,27 @@
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="87" id="0" name="End of Level" pts="4,44.0,0.0,44.0,87.0,0.0,87.0,0.0,0.0" r="64" type="box" w="44" x="4750" y="200"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="0" id="2" name="V 1" sx="1.0" sy="1.0" x="4" y="149" z="0"/>
         <actor a="0.0" aid="2" c="false" group="0" id="6" name="Azazel Statue 2" sx="1.0" sy="1.0" x="3092" y="238" z="0"/>
     </actors>
-    <snippets/>
+    <snippets>
+        <s enabled="true" id="16">
+            <prop id="1" list="0" val="0"/>
+            <prop id="2" list="0" val="2"/>
+            <prop id="4" list="0" val="2"/>
+            <prop id="7" list="0" val="false"/>
+            <prop id="8" list="0" val="false"/>
+            <prop id="9" list="0" val="No Control"/>
+            <prop id="10" list="0" val="0.5"/>
+            <prop id="11" list="0" val="0.5"/>
+            <prop id="12" list="0" val="-1"/>
+        </s>
+    </snippets>
     <terrain>
         <p pts="4,0.0,0.0,128.0,0.0,128.0,64.0,0.0,64.0" x="4672.0" y="288.0"/>
         <p pts="4,0.0,64.0,0.0,0.0,224.0,0.0,224.0,64.0" x="3136.0" y="352.0"/>
@@ -23,7 +37,7 @@
         <p pts="4,256.0,0.0,256.0,64.0,0.0,64.0,0.0,0.0" x="3488.0" y="256.0"/>
         <p pts="4,0.0,64.0,0.0,0.0,224.0,0.0,224.0,64.0" x="3904.0" y="256.0"/>
         <p pts="4,0.0,64.0,0.0,0.0,224.0,0.0,224.0,64.0" x="384.0" y="224.0"/>
-        <p pts="4,0.0,0.0,288.0,0.0,288.0,64.0,0.0,64.0" x="4256.0" y="128.0"/>
+        <p pts="4,288.0,0.0,288.0,64.0,0.0,64.0,0.0,0.0" x="4256.0" y="160.0"/>
         <p pts="4,0.0,64.0,0.0,0.0,288.0,0.0,288.0,64.0" x="1504.0" y="352.0"/>
         <p pts="4,576.0,0.0,576.0,64.0,0.0,64.0,0.0,0.0" x="768.0" y="320.0"/>
     </terrain>

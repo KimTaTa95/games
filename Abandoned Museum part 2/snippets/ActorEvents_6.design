@@ -72,7 +72,7 @@
                         <set-dxy comment="false" x="22" y="191">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="-20"/>
+                            <int id="2" val="-30"/>
                         </set-dxy>
                         <set-val-9-2 comment="false" x="22" y="218">
                             <false comment="false" id="0" x="0" y="0"/>
@@ -211,4 +211,74 @@
         </init>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-key-press-release comment="false" x="0" y="106">
+            <group eventID="8" id="-1">
+                <if comment="false" x="11" y="133">
+                    <group eventID="8" id="-1">
+                        <set-game-val-1 comment="false" x="22" y="163">
+                            <int id="0" val="2"/>
+                        </set-game-val-1>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <get-game-val-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+            <control eid="0" id="0"/>
+            <int id="1" val="1"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="8" id="-1"/>
+    <group eventID="10" id="0">
+        <step comment="false" x="0" y="101">
+            <group eventID="9" id="-1">
+                <if comment="false" x="11" y="126">
+                    <group eventID="9" id="-1">
+                        <if comment="false" x="22" y="156">
+                            <group eventID="9" id="-1">
+                                <set-dxy comment="false" x="33" y="189">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="-30"/>
+                                </set-dxy>
+                                <if comment="false" x="33" y="216">
+                                    <group eventID="9" id="-1">
+                                        <set-game-val-1 comment="false" x="44" y="246">
+                                            <int id="0" val="1"/>
+                                        </set-game-val-1>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-game-val-1 comment="false" id="1" x="0" y="0"/>
+                                    </eq>
+                                </if>
+                                <if comment="false" x="33" y="278">
+                                    <group eventID="9" id="-1">
+                                        <set-game-val-3 comment="false" x="44" y="308">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-game-val-3>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="2"/>
+                                        <get-game-val-1 comment="false" id="1" x="0" y="0"/>
+                                    </eq>
+                                </if>
+                            </group>
+                            <keystate comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <control eid="0" id="1"/>
+                            </keystate>
+                        </if>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <true comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-3 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="10" id="-1"/>
 </groups>

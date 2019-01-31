@@ -5,7 +5,7 @@
         <blocks/>
         <events>
             <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="1" repeats="true"/>
-            <event displayName="Any Key" enabled="true" id="3" name="event-key-any-press-release" order="3" repeats="true"/>
+            <event displayName="Any Key" enabled="false" id="3" name="event-key-any-press-release" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_2" classname="scripts.SceneEvents_2" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="2" name="SceneEvents_2" oid="-1" package="scripts." sceneid="2" shared="false" type="scene">
@@ -59,9 +59,11 @@
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName=" Jump " enabled="true" id="3" name="step" order="7" repeats="true"/>
             <event displayName="Screen" enabled="true" id="4" name="step" order="5" repeats="true"/>
-            <event displayName="Touch Floor" enabled="true" id="5" name="event-collide-actortogroup" order="9" repeats="false"/>
+            <event displayName="Touch Floor" enabled="true" id="5" name="event-collide-actortogroup" order="13" repeats="false"/>
             <event displayName="Die in Pit and Reload" enabled="true" id="6" name="step" order="4" repeats="true"/>
             <event displayName="Camera" enabled="true" id="7" name="init" order="3" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="8" name="event-key-press-release" order="11" repeats="true"/>
+            <event displayName="Jumping 2 " enabled="false" id="10" name="step" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
@@ -101,6 +103,23 @@
         <events>
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_16_16_SwitchSceneonEnterRegion" classname="scripts.Design_16_16_SwitchSceneonEnterRegion" desc="Switch scene when an actor enters a region." description="Switch scene when an actor enters a region." design="true" drawOrder="0" id="16" name="Switch Scene on Enter Region" oid="-1" package="scripts" shared="false" type="scene">
+        <region default="" defaultValue="" desc="The region which will trigger the scene switch." dropdown="" fullname="Region" hidden="false" id="1" name="_Region" order="2"/>
+        <scene default="" defaultValue="" desc="The scene to switch to." dropdown="" fullname="Next Scene" hidden="false" id="2" name="_NextScene" order="3"/>
+        <actor default="" defaultValue="" desc="The actor that will trigger the scene switch when entering the region." dropdown="" fullname="Actor" hidden="false" id="4" name="_Actor" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="In Region" hidden="true" id="7" name="_InRegion" order="0"/>
+        <boolean default="false" defaultValue="false" desc="If selected, only switch scene, when &lt;var&gt;Switch Control&lt;/var&gt; is pressed, while the actor is within the region." dropdown="" fullname="Only Switch On Key Press" hidden="false" id="8" name="_OnlySwitchOnKeyPress" order="4"/>
+        <control default="" defaultValue="" desc="The Control to trigger the scene switch if &lt;var&gt;Only Switch On Key Press&lt;/var&gt; is selected." dropdown="" fullname="Switch Control" hidden="false" id="9" name="_SwitchControl" order="5"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition out, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise the time to transition out and in." dropdown="" fullname="Out Time" hidden="false" id="10" name="_OutTime" order="7"/>
+        <number default="0.5" defaultValue="0.5" desc="The time to transition in, in seconds, if one of the first six &lt;em&gt;Transition Styles&lt;/em&gt; is used. Otherwise it is ignored." dropdown="" fullname="In Time" hidden="false" id="11" name="_InTime" order="8"/>
+        <text default="" defaultValue="" desc="The style to use for the switch scene transition." dropdown="Fade=Fade&#10;Blinds=Blinds&#10;Bubbles=Bubbles&#10;Spotlight=Spotlight&#10;Blur=Blur&#10;Box=Box&#10;Crossfade=Crossfade&#10;Slide Up=Slide Up&#10;Slide Down=Slide Down&#10;Slide Left=Slide Left&#10;Slide Right=Slide Right" fullname="Transition Style" hidden="false" id="12" name="_TransitionStyle" order="6"/>
+        <blocks/>
+        <events>
+            <event displayName=" Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="SwitchScene" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
         </events>
     </snippet>
 </pack>
