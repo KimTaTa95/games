@@ -70,18 +70,30 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_3 extends SceneScript
+class SceneEvents_0 extends SceneScript
 {
+	public var _Radius:Float;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
+		nameMap.set("Radius", "_Radius");
+		_Radius = 0.0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== Specific Actor ======================== */
+		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAs(getActor(1), a))
+			{
+				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
+			}
+		});
 		
 	}
 	

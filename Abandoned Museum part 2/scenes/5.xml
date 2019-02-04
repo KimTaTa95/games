@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="1" desc="" eventsnippetid="5" extheight="544" extwidth="704" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="5" name="Level Six" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
+<scene depth="1" desc="" eventsnippetid="5" extheight="544" extwidth="4960" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="5" name="Level Six" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="4896">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
@@ -9,6 +9,12 @@
     <terrainRegions/>
     <actors/>
     <snippets/>
-    <terrain/>
+    <terrain>
+        <p pts="6,0.0,64.0,0.0,32.0,320.0,32.0,320.0,0.0,512.0,0.0,512.0,64.0" x="1440.0" y="416.0"/>
+        <p pts="4,0.0,32.0,0.0,0.0,448.0,0.0,448.0,32.0" x="864.0" y="448.0"/>
+        <p pts="12,448.0,128.0,448.0,96.0,672.0,96.0,672.0,64.0,800.0,64.0,800.0,32.0,1216.0,32.0,1216.0,0.0,2016.0,0.0,2016.0,160.0,0.0,160.0,0.0,128.0" x="2880.0" y="320.0"/>
+        <p pts="4,672.0,0.0,672.0,32.0,0.0,32.0,0.0,0.0" x="2080.0" y="448.0"/>
+        <p pts="4,0.0,32.0,0.0,0.0,736.0,0.0,736.0,32.0" x="0.0" y="448.0"/>
+    </terrain>
     <atlases members="" retainAtlases="true"/>
 </scene>

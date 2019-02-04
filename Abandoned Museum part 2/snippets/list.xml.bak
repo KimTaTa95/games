@@ -33,7 +33,7 @@
         <blocks/>
         <events>
             <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Jump" enabled="true" id="2" name="step" order="7" repeats="true"/>
+            <event displayName="Jump" enabled="true" id="2" name="step" order="7" repeats="false"/>
             <event displayName="Screen" enabled="true" id="3" name="step" order="4" repeats="false"/>
             <event displayName="Touch Floor " enabled="true" id="5" name="event-collide-actortogroup" order="6" repeats="true"/>
             <event displayName="Camera" enabled="true" id="6" name="init" order="2" repeats="true"/>
