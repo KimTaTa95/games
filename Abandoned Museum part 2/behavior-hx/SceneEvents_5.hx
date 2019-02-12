@@ -70,18 +70,60 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_3 extends SceneScript
+class SceneEvents_5 extends SceneScript
 {
+	public var _UserInput:String;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
+		nameMap.set("UserInput", "_UserInput");
+		_UserInput = "";
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* =========================== Any Key ============================ */
+		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((event.keyCode == Key.ENTER))
+				{
+					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
+				}
+				else if((event.keyCode == Key.BACKSPACE))
+				{
+					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
+					propertyChanged("_UserInput", _UserInput);
+				}
+				else
+				{
+					if(isShiftDown())
+					{
+						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
+						propertyChanged("_UserInput", _UserInput);
+					}
+					else
+					{
+						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
+						propertyChanged("_UserInput", _UserInput);
+					}
+				}
+			}
+		});
+		
+		/* ======================== Specific Actor ======================== */
+		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAs(getActor(1), a))
+			{
+				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
+			}
+		});
 		
 	}
 	

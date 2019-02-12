@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,97 +70,58 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_2 extends ActorScript
+class SceneEvents_4 extends SceneScript
 {
-	public var _TouchFloor:Bool;
+	public var _UserInput:String;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Touch Floor", "_TouchFloor");
-		_TouchFloor = false;
+		super();
+		nameMap.set("UserInput", "_UserInput");
+		_UserInput = "";
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		engine.cameraFollow(actor);
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* =========================== Any Key ============================ */
+		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(isKeyDown("left"))
+				if((event.keyCode == Key.ENTER))
 				{
-					actor.setXVelocity(-15);
+					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
 				}
-				else if(isKeyDown("right"))
+				else if((event.keyCode == Key.BACKSPACE))
 				{
-					actor.setXVelocity(15);
+					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
+					propertyChanged("_UserInput", _UserInput);
 				}
 				else
 				{
-					actor.setXVelocity(0);
+					if(isShiftDown())
+					{
+						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
+						propertyChanged("_UserInput", _UserInput);
+					}
+					else
+					{
+						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
+						propertyChanged("_UserInput", _UserInput);
+					}
 				}
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== Specific Actor ======================== */
+		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && sameAs(getActor(1), a))
 			{
-				if((getScreenHeight() < actor.getY()))
-				{
-					reloadCurrentScene(null, createCrossfadeTransition(.5));
-				}
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getScreenX() < 0))
-				{
-					actor.setX(1);
-				}
-				else if((actor.getScreenY() > (getScreenWidth() - (actor.getWidth()))))
-				{
-					actor.setX(((getScreenWidth() - (actor.getWidth())) - 1));
-				}
-			}
-		});
-		
-		/* ======================= Member of Group ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAsAny(getActorGroup(1),event.otherActor.getType(),event.otherActor.getGroup()))
-			{
-				if((event.otherFromTop && event.thisFromTop))
-				{
-					_TouchFloor = true;
-					propertyChanged("_TouchFloor", _TouchFloor);
-				}
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((isKeyDown("up") && (_TouchFloor == true)))
-				{
-					actor.setYVelocity(-20);
-					_TouchFloor = false;
-					propertyChanged("_TouchFloor", _TouchFloor);
-				}
+				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
 			}
 		});
 		

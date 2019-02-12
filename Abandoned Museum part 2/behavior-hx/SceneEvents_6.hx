@@ -70,20 +70,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_0 extends SceneScript
+class SceneEvents_6 extends SceneScript
 {
-	public var _Radius:Float;
-	public var _setuserInputTo:String;
 	public var _UserInput:String;
 	
 	
 	public function new(dummy:Int, dummy2:Engine)
 	{
 		super();
-		nameMap.set("Radius", "_Radius");
-		_Radius = 0.0;
-		nameMap.set("set userInput To", "_setuserInputTo");
-		_setuserInputTo = "";
 		nameMap.set("UserInput", "_UserInput");
 		_UserInput = "";
 		
@@ -91,15 +85,6 @@ class SceneEvents_0 extends SceneScript
 	
 	override public function init()
 	{
-		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
-			}
-		});
 		
 		/* =========================== Any Key ============================ */
 		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
@@ -128,6 +113,15 @@ class SceneEvents_0 extends SceneScript
 						propertyChanged("_UserInput", _UserInput);
 					}
 				}
+			}
+		});
+		
+		/* ======================== Specific Actor ======================== */
+		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAs(getActor(1), a))
+			{
+				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
 			}
 		});
 		
