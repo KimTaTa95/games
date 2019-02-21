@@ -7,12 +7,8 @@
     <joints/>
     <regions/>
     <terrainRegions/>
-    <actors>
-        <actor a="0.0" aid="1" c="false" group="0" id="6" name="Azazel Statue 1" sx="1.0" sy="1.0" x="478" y="274" z="0"/>
-    </actors>
+    <actors/>
     <snippets/>
-    <terrain>
-        <p pts="4,0.0,32.0,0.0,0.0,96.0,0.0,96.0,32.0" x="512.0" y="384.0"/>
-    </terrain>
+    <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,58 +69,97 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_5 extends SceneScript
+class ActorEvents_2 extends ActorScript
 {
-	public var _UserInput:String;
+	public var _touchfloor:Bool;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("UserInput", "_UserInput");
-		_UserInput = "";
+		super(actor);
+		nameMap.set("touch floor", "_touchfloor");
+		_touchfloor = true;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== Any Key ============================ */
-		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		engine.cameraFollow(actor);
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if((event.keyCode == Key.ENTER))
+				if(isKeyDown("left"))
 				{
-					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
+					actor.setXVelocity(-15);
 				}
-				else if((event.keyCode == Key.BACKSPACE))
+				else if(isKeyDown("right"))
 				{
-					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
-					propertyChanged("_UserInput", _UserInput);
+					actor.setXVelocity(15);
 				}
 				else
 				{
-					if(isShiftDown())
-					{
-						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
-						propertyChanged("_UserInput", _UserInput);
-					}
-					else
-					{
-						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
-						propertyChanged("_UserInput", _UserInput);
-					}
+					actor.setXVelocity(0);
 				}
 			}
 		});
 		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
+			if(wrapper.enabled)
 			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
+				if((getScreenHeight() < actor.getY()))
+				{
+					reloadCurrentScene(null, createCrossfadeTransition(.5));
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((actor.getScreenX() < 0))
+				{
+					actor.setX(1);
+				}
+				else if((actor.getScreenY() > (getScreenWidth() - (actor.getWidth()))))
+				{
+					actor.setX(((getScreenWidth() - (actor.getWidth())) - 1));
+				}
+			}
+		});
+		
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorGroup(1),event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if((event.otherFromTop && event.thisFromBottom))
+				{
+					_touchfloor = true;
+					propertyChanged("_touchfloor", _touchfloor);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((isKeyDown("up") && (_touchfloor == true)))
+				{
+					actor.setYVelocity(-30);
+					_touchfloor = false;
+					propertyChanged("_touchfloor", _touchfloor);
+				}
 			}
 		});
 		
