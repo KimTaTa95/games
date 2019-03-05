@@ -298,7 +298,7 @@
                         </set-dxy>
                         <setanim comment="false" x="22" y="207">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="right"/>
+                            <int id="1" val="left"/>
                         </setanim>
                     </group>
                     <keystate comment="false" id="0" x="0" y="0">
@@ -315,7 +315,7 @@
                         </set-dxy>
                         <setanim comment="false" x="22" y="306">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="left"/>
+                            <int id="1" val="right"/>
                         </setanim>
                     </group>
                     <keystate comment="false" id="0" x="0" y="0">

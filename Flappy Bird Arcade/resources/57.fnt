@@ -1,0 +1,19 @@
+#
+#Sat Apr 12 09:40:54 BST 2014
+monospace=false
+monospace.numerals=false
+style=bold
+alphabet=
+tracking=0
+stroke.color=\#000000
+color=\#ffffff
+shadow.y=2
+family=04B_19__.ttf
+shadow.x=2
+shadow.color=\#000000
+gradient.offset=11
+shadow.blur=3
+chars=all
+stroke.size=1
+antialias=true
+size=64

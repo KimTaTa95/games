@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="55" extheight="704" extwidth="896" extx="-32" exty="-32" format="2.1" gravx="-0.0" gravy="0.0" height="640" id="2" name="Game Over" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="832">
+    <layers>
+        <layer color="100,168,234" id="0" name="Layer 0" order="0"/>
+    </layers>
+    <color-bg blue="255" green="255" red="255"/>
+    <backgrounds>
+        <ref id="72"/>
+        <ref id="23"/>
+    </backgrounds>
+    <foregrounds/>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="73" name="Game Over Logo 1" sx="0.5" sy="0.5" x="1" y="20" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="77" name="Play 3" sx="0.5" sy="0.5" x="180" y="364" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="86" name="Score_Board 4" sx="2.5" sy="2.5" x="300" y="260" z="0"/>
+    </actors>
+    <snippets>
+        <s enabled="true" id="33">
+            <prop id="2" list="0" val="-1"/>
+            <prop id="7" list="0" val="0.5"/>
+            <prop id="8" list="0" val="0.5"/>
+            <prop id="9" list="0" val="Fade"/>
+        </s>
+    </snippets>
+    <terrain/>
+</scene>

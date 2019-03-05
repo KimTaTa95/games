@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="32" extheight="704" extwidth="896" extx="-32" exty="-32" format="2.1" gravx="-0.0" gravy="0.0" height="640" id="1" name="Title" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="832">
+    <layers>
+        <layer color="100,168,234" id="0" name="Layer 0" order="0"/>
+    </layers>
+    <color-bg blue="255" green="255" red="255"/>
+    <backgrounds>
+        <ref id="72"/>
+        <ref id="23"/>
+    </backgrounds>
+    <foregrounds/>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="83" name="Flappy_Logo 1" sx="0.7" sy="0.7" x="99" y="14" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="81" name="Get Ready 2" sx="0.5" sy="0.5" x="110" y="211" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="77" name="Play 3" sx="0.5" sy="0.5" x="180" y="364" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="3" id="33" name="Birdie Title 5" sx="1.5" sy="1.5" x="150" y="281" z="0"/>
+    </actors>
+    <snippets>
+        <s enabled="true" id="56">
+            <prop id="2" list="0" val="-1"/>
+            <prop id="7" list="0" val="0.5"/>
+            <prop id="8" list="0" val="0.5"/>
+            <prop id="9" list="0" val="Fade"/>
+        </s>
+    </snippets>
+    <terrain/>
+</scene>

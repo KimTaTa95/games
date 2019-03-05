@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <FONT eid="85" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="500"/>
+                    <int id="2" val="280"/>
+                </draw-text>
+                <set-font-new comment="false" x="26" y="92">
+                    <FONT eid="85" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="119">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="20"/>
+                    <int id="2" val="20"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-font-new comment="false" x="26" y="40">
+                    <FONT eid="85" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="26" y="67">
+                    <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="380"/>
+                    <int id="2" val="280"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="4" id="-1"/>
+</groups>

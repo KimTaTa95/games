@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<font>
+<info face="85" size="320" bold="0" italic="0" charset="" unicode="0" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="1,1"/>
+<common lineHeight="367" base="26" scaleW="1024" scaleH="1024" pages="1" packed="0"/>
+<pages>
+<page id="0" file="font85.png"/>
+</pages>
+<chars count="10">
+<char id="32" x="0" y="0" width="0" height="0" xoffset="0" yoffset="278" xadvance="89" page="0" chnl="0"/>
+<char id="57" x="0" y="0" width="123" height="225" xoffset="0" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="56" x="123" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="55" x="245" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="54" x="367" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="53" x="489" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="52" x="611" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="51" x="733" y="0" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="50" x="855" y="0" width="123" height="225" xoffset="0" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="49" x="0" y="225" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+<char id="48" x="122" y="225" width="122" height="225" xoffset="1" yoffset="60" xadvance="135" page="0" chnl="0" />
+</chars>
+</font>

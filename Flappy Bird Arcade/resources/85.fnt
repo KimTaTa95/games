@@ -1,0 +1,19 @@
+#
+#Sat Apr 12 10:02:39 BST 2014
+monospace=false
+monospace.numerals=false
+style=plain
+alphabet=
+tracking=0
+stroke.color=\#000000
+color=\#ffffff
+shadow.y=0
+family=ataurusc.ttf
+shadow.x=0
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=0-9
+stroke.size=3
+antialias=true
+size=80
