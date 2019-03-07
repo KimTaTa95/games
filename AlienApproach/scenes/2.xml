@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="13" extheight="544" extwidth="704" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="2" name="level 2" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
+    <layers>
+        <grad-bg b1="0" b2="128" g1="0" g2="0" r1="0" r2="0"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="1" name="Player Tank 1" sx="1.0" sy="1.0" x="0" y="382" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="4" id="3" name="Alien Saucer 2" sx="1.0" sy="1.0" x="576" y="0" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="4" id="3" name="Alien Saucer 3" sx="1.0" sy="1.0" x="480" y="0" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="4" id="3" name="Alien Saucer 4" sx="1.0" sy="1.0" x="384" y="0" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="4" id="3" name="Alien Saucer 5" sx="1.0" sy="1.0" x="0" y="0" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="4" id="3" name="Alien Saucer 6" sx="1.0" sy="1.0" x="96" y="0" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="4" id="3" name="Alien Saucer 7" sx="1.0" sy="1.0" x="192" y="0" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="4" id="3" name="Alien Saucer 8" sx="1.0" sy="1.0" x="288" y="0" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="4" id="5" name="Alien Grabber 9" sx="1.0" sy="1.0" x="544" y="64" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="4" id="5" name="Alien Grabber 10" sx="1.0" sy="1.0" x="32" y="64" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="4" id="5" name="Alien Grabber 11" sx="1.0" sy="1.0" x="160" y="64" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="4" id="5" name="Alien Grabber 12" sx="1.0" sy="1.0" x="416" y="64" z="0"/>
+        <actor a="0.0" aid="13" c="false" group="4" id="5" name="Alien Grabber 13" sx="1.0" sy="1.0" x="256" y="64" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="4" id="5" name="Alien Grabber 14" sx="1.0" sy="1.0" x="320" y="64" z="0"/>
+        <actor a="0.0" aid="15" c="false" group="4" id="7" name="Alien Cruiser 15" sx="1.0" sy="1.0" x="480" y="64" z="0"/>
+        <actor a="0.0" aid="16" c="false" group="4" id="7" name="Alien Cruiser 16" sx="1.0" sy="1.0" x="96" y="64" z="0"/>
+    </actors>
+    <snippets>
+        <s enabled="true" id="17">
+            <prop id="1" list="0" val="1"/>
+            <prop id="2" list="0" val="false"/>
+            <prop id="3" list="0" val="3"/>
+            <prop id="4" list="0" val="40"/>
+        </s>
+    </snippets>
+    <terrain>
+        <p pts="4,0.0,32.0,0.0,0.0,640.0,0.0,640.0,32.0" x="0.0" y="448.0"/>
+    </terrain>
+    <atlases members="" retainAtlases="true"/>
+</scene>

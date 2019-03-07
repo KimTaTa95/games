@@ -327,4 +327,22 @@
         </step>
     </group>
     <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <event-collide-typetotype comment="false" x="0" y="83">
+            <group eventID="10" id="-1">
+                <if comment="false" x="11" y="115">
+                    <group eventID="10" id="-1"/>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <collision-shape-group2 comment="false" id="0" x="0" y="0">
+                            <int id="0" val="1"/>
+                        </collision-shape-group2>
+                        <int id="1" val=""/>
+                    </eq>
+                </if>
+            </group>
+            <actortype eid="27" id="0"/>
+            <actortype eid="10" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="10" id="-1"/>
 </groups>

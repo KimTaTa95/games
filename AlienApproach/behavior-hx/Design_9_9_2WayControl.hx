@@ -19,7 +19,6 @@ import com.stencyl.models.Scene;
 import com.stencyl.models.Sound;
 import com.stencyl.models.Region;
 import com.stencyl.models.Font;
-import com.stencyl.models.Joystick;
 
 import com.stencyl.Engine;
 import com.stencyl.Input;
@@ -40,7 +39,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,62 +68,116 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_2 extends SceneScript
+class Design_9_9_2WayControl extends ActorScript
+{          	
+	
+public var pressedRight:Bool;
+
+public var pressedLeft:Bool;
+
+public var controlLeft:String;
+
+public var controlRight:String;
+
+public var dir:Float;
+
+public var topSpeed:Float;
+
+public var decel:Float;
+    public function _customEvent_moveLeft():Void
 {
-	public var _UserInput:String;
-	
-	
-	public function new(dummy:Int, dummy2:Engine)
+        actor.setXVelocity(-(topSpeed));
+        dir = asNumber(3);
+propertyChanged("dir", dir);
+}
+
+    public function _customEvent_checkInput():Void
+{
+        pressedLeft = isKeyDown(controlLeft);
+propertyChanged("pressedLeft", pressedLeft);
+        pressedRight = isKeyDown(controlRight);
+propertyChanged("pressedRight", pressedRight);
+}
+
+    public function _customEvent_moveRight():Void
+{
+        actor.setXVelocity(topSpeed);
+        dir = asNumber(4);
+propertyChanged("dir", dir);
+}
+
+
+ 
+ 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("UserInput", "_UserInput");
-		_UserInput = "";
-		
+		super(actor);
+		nameMap.set("pressedRight", "pressedRight");
+pressedRight = false;
+nameMap.set("pressedLeft", "pressedLeft");
+pressedLeft = false;
+nameMap.set("Left Control", "controlLeft");
+nameMap.set("Right Control", "controlRight");
+nameMap.set("Initial Direction", "dir");
+dir = 0.0;
+nameMap.set("Top Speed", "topSpeed");
+topSpeed = 18.0;
+nameMap.set("Slowdown Rate", "decel");
+decel = 0.0;
+nameMap.set("Actor", "actor");
+
 	}
 	
 	override public function init()
 	{
-		
-		/* =========================== Any Key ============================ */
-		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((event.keyCode == Key.ENTER))
-				{
-					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
-				}
-				else if((event.keyCode == Key.BACKSPACE))
-				{
-					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
-					propertyChanged("_UserInput", _UserInput);
-				}
-				else
-				{
-					if(isShiftDown())
-					{
-						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
-						propertyChanged("_UserInput", _UserInput);
-					}
-					else
-					{
-						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
-						propertyChanged("_UserInput", _UserInput);
-					}
-				}
-			}
-		});
-		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
-			}
-		});
-		
-	}
+		    
+/* ======================== When Creating ========================= */
+
+    
+/* ======================== When Updating ========================= */
+addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+{
+if(wrapper.enabled)
+{
+        _customEvent_checkInput();
+        if((!(pressedLeft) && !(pressedRight)))
+{
+            actor.setXVelocity((actor.getXVelocity() * decel));
+}
+
+        if((pressedLeft && !(pressedRight)))
+{
+            _customEvent_moveLeft();
+            actor.setYVelocity(0);
+}
+
+        else
+{
+            if((pressedRight && !(pressedLeft)))
+{
+                _customEvent_moveRight();
+                actor.setYVelocity(0);
+}
+
+}
+
+        if((actor.getXVelocity() > topSpeed))
+{
+            actor.setXVelocity(topSpeed);
+}
+
+        else
+{
+            if((actor.getXVelocity() < -(topSpeed)))
+{
+                actor.setXVelocity(-(topSpeed));
+}
+
+}
+
+}
+});
+
+	}	      	
 	
 	override public function forwardMessage(msg:String)
 	{

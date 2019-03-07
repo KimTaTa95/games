@@ -19,7 +19,6 @@ import com.stencyl.models.Scene;
 import com.stencyl.models.Sound;
 import com.stencyl.models.Region;
 import com.stencyl.models.Font;
-import com.stencyl.models.Joystick;
 
 import com.stencyl.Engine;
 import com.stencyl.Input;
@@ -40,7 +39,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,62 +68,44 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_5 extends SceneScript
-{
-	public var _UserInput:String;
+class Design_5_5_DoonKeyPress extends ActorScript
+{          	
 	
-	
-	public function new(dummy:Int, dummy2:Engine)
+public var action:String;
+
+public var key:String;
+
+ 
+ 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("UserInput", "_UserInput");
-		_UserInput = "";
-		
+		super(actor);
+		nameMap.set("Action to Perform", "action");
+action = "";
+nameMap.set("Key", "key");
+nameMap.set("Actor", "actor");
+
 	}
 	
 	override public function init()
 	{
-		
-		/* =========================== Any Key ============================ */
-		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((event.keyCode == Key.ENTER))
-				{
-					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
-				}
-				else if((event.keyCode == Key.BACKSPACE))
-				{
-					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
-					propertyChanged("_UserInput", _UserInput);
-				}
-				else
-				{
-					if(isShiftDown())
-					{
-						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
-						propertyChanged("_UserInput", _UserInput);
-					}
-					else
-					{
-						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
-						propertyChanged("_UserInput", _UserInput);
-					}
-				}
-			}
-		});
-		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
-			}
-		});
-		
-	}
+		    
+/* ======================== When Creating ========================= */
+
+    
+/* ======================== When Updating ========================= */
+addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+{
+if(wrapper.enabled)
+{
+        if(isKeyPressed(key))
+{
+            actor.shout("_customEvent_" + action);
+}
+
+}
+});
+
+	}	      	
 	
 	override public function forwardMessage(msg:String)
 	{
