@@ -51,6 +51,7 @@
         <group desc="Enemy #1,&#10;Fallen Angel / Statue" id="5" name="Azazel Statue"/>
         <group desc="" id="6" name="Enemies"/>
         <group desc="" id="7" name="Heroes"/>
+        <group desc="" id="8" name="PickUpObjects"/>
     </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
@@ -63,9 +64,11 @@
         <cgroup g1="3" g2="3"/>
         <cgroup g1="3" g2="4"/>
         <cgroup g1="3" g2="5"/>
-        <cgroup g1="4" g2="4"/>
+        <cgroup g1="4" g2="5"/>
         <cgroup g1="4" g2="6"/>
+        <cgroup g1="4" g2="8"/>
         <cgroup g1="5" g2="7"/>
+        <cgroup g1="5" g2="8"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -84,6 +87,7 @@
         <number cid="-1" id="1" name="JumpTimes" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="Jump Times" save="true" value="false"/>
         <boolean cid="-1" id="3" name="Touching Floor" save="true" value="true"/>
+        <number cid="-1" id="4" name="Flower Shard" save="true" value="0"/>
         <number cid="-1" id="2" name="TouchingFloor" save="true" value="0.0"/>
     </attributes>
     <collisions>

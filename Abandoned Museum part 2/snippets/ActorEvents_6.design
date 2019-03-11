@@ -282,10 +282,10 @@
     </group>
     <group eventID="10" id="-1"/>
     <group eventID="11" id="0">
-        <event-collide-typetotype comment="false" x="3" y="79">
+        <event-collide-typetotype comment="false" x="0" y="110">
             <group eventID="11" id="-1"/>
             <actortype eid="6" id="0"/>
-            <actortype id="1"/>
+            <actortype eid="27" id="1"/>
         </event-collide-typetotype>
     </group>
     <group eventID="11" id="-1"/>
