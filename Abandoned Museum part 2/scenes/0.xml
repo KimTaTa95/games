@@ -7,19 +7,43 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="300" id="0" name="End of Level" pts="4,-19.0,-150.0,19.0,-150.0,19.0,150.0,-19.0,150.0" r="64" type="box" w="38" x="5128" y="-2"/>
+        <region b="64" g="64" h="300" id="0" name="End of Level" pts="4,-19.0,150.0,19.0,150.0,19.0,-150.0,-19.0,-150.0" r="64" type="box" w="38" x="5128" y="-2"/>
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="4" id="27" name="V 1" sx="2.1" sy="2.2222223" x="16" y="386" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="4" id="27" name="V 1" sx="2.1" sy="2.2222223" x="2667" y="102" z="0"/>
         <actor a="0.0" aid="2" c="false" group="8" id="10" name="Flower Shard 2" sx="1.5625" sy="1.25" x="2921" y="99" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="8" id="10" name="Flower Shard 3" sx="1.25" sy="1.25" x="2946" y="100" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="8" id="10" name="Flower Shard 4" sx="1.3125" sy="1.375" x="2970" y="101" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="8" id="10" name="Flower Shard 5" sx="1.5" sy="1.3125" x="2994" y="102" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="8" id="10" name="Flower Shard 6" sx="1.5625" sy="1.625" x="3075" y="130" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="8" id="10" name="Flower Shard 7" sx="1.5" sy="1.625" x="3142" y="101" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="8" id="10" name="Flower Shard 8" sx="1.3125" sy="1.5" x="3168" y="103" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="8" id="10" name="Flower Shard 9" sx="1.3125" sy="1.3125" x="3193" y="102" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="8" id="10" name="Flower Shard 10" sx="1.25" sy="1.3125" x="3218" y="104" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="8" id="10" name="Flower Shard 11" sx="1.125" sy="1.3125" x="3248" y="103" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="8" id="10" name="Flower Shard 12" sx="1.125" sy="1.375" x="3272" y="102" z="0"/>
+        <actor a="0.0" aid="13" c="false" group="8" id="10" name="Flower Shard 13" sx="1.3125" sy="1.1875" x="3826" y="134" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="8" id="10" name="Flower Shard 14" sx="1.4375" sy="1.1875" x="3863" y="135" z="0"/>
+        <actor a="0.0" aid="15" c="false" group="8" id="10" name="Flower Shard 15" sx="1.25" sy="1.125" x="3893" y="133" z="0"/>
+        <actor a="0.0" aid="16" c="false" group="8" id="10" name="Flower Shard 16" sx="1.1875" sy="1.1875" x="4034" y="167" z="0"/>
+        <actor a="0.0" aid="17" c="false" group="8" id="10" name="Flower Shard 17" sx="1.1875" sy="1.3125" x="4062" y="168" z="0"/>
+        <actor a="0.0" aid="18" c="false" group="8" id="10" name="Flower Shard 18" sx="1.3125" sy="1.3125" x="4097" y="166" z="0"/>
+        <actor a="0.0" aid="19" c="false" group="8" id="10" name="Flower Shard 19" sx="1.25" sy="1.3125" x="4360" y="167" z="0"/>
+        <actor a="0.0" aid="20" c="false" group="8" id="10" name="Flower Shard 20" sx="1.3125" sy="1.3125" x="4384" y="166" z="0"/>
+        <actor a="0.0" aid="21" c="false" group="8" id="10" name="Flower Shard 21" sx="1.3125" sy="1.3125" x="4414" y="167" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="8" id="10" name="Flower Shard 22" sx="1.375" sy="1.4375" x="5065" y="200" z="0"/>
+        <actor a="0.0" aid="23" c="false" group="8" id="10" name="Flower Shard 23" sx="1.4375" sy="1.5" x="5092" y="200" z="0"/>
+        <actor a="0.0" aid="24" c="false" group="8" id="10" name="Flower Shard 24" sx="1.3125" sy="1.25" x="5119" y="199" z="0"/>
+        <actor a="0.0" aid="25" c="false" group="8" id="10" name="Flower Shard 25" sx="1.375" sy="1.4375" x="4993" y="229" z="0"/>
+        <actor a="0.0" aid="26" c="false" group="8" id="10" name="Flower Shard 26" sx="1.375" sy="1.4375" x="4963" y="229" z="0"/>
     </actors>
     <snippets/>
     <terrain>
-        <p pts="10,0.0,288.0,0.0,0.0,224.0,0.0,224.0,32.0,448.0,32.0,448.0,64.0,800.0,64.0,800.0,32.0,992.0,32.0,992.0,288.0" x="4224.0" y="192.0"/>
+        <p pts="4,0.0,320.0,0.0,0.0,480.0,0.0,480.0,320.0" x="1728.0" y="160.0"/>
         <p pts="8,0.0,352.0,0.0,0.0,576.0,0.0,576.0,32.0,800.0,32.0,800.0,64.0,992.0,64.0,992.0,352.0" x="3136.0" y="128.0"/>
         <p pts="10,0.0,320.0,0.0,288.0,224.0,288.0,320.0,192.0,384.0,128.0,480.0,32.0,1152.0,32.0,1152.0,0.0,1632.0,0.0,1632.0,320.0" x="0.0" y="160.0"/>
-        <p pts="4,0.0,320.0,0.0,0.0,480.0,0.0,480.0,320.0" x="1728.0" y="160.0"/>
+        <p pts="10,0.0,288.0,0.0,0.0,224.0,0.0,224.0,32.0,448.0,32.0,448.0,64.0,800.0,64.0,800.0,32.0,992.0,32.0,992.0,288.0" x="4224.0" y="192.0"/>
         <p pts="6,0.0,352.0,0.0,32.0,416.0,32.0,416.0,0.0,704.0,0.0,704.0,352.0" x="2336.0" y="128.0"/>
     </terrain>
     <atlases members="" retainAtlases="true"/>

@@ -87,7 +87,7 @@
         <number cid="-1" id="1" name="JumpTimes" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="Jump Times" save="true" value="false"/>
         <boolean cid="-1" id="3" name="Touching Floor" save="true" value="true"/>
-        <number cid="-1" id="4" name="Flower Shard" save="true" value="0"/>
+        <number cid="-1" id="4" name="Flower Shard" save="true" value="0.0"/>
         <number cid="-1" id="2" name="TouchingFloor" save="true" value="0.0"/>
     </attributes>
     <collisions>
@@ -119,7 +119,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="4,6,8,10,12,14,16,18,20,21,24,25,26,27," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="4,6,8,10,12,14,16,18,20,21,24,25,26,27,29," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
