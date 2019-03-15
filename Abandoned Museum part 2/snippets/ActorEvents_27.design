@@ -75,7 +75,7 @@
             </keystate>
         </else-if>
     </group>
-    <group eventID="1" id="4">
+    <group eventID="1" id="2">
         <if comment="false" x="695" y="127">
             <group eventID="1" id="-1">
                 <set-dxy comment="false" x="706" y="160">

@@ -5,7 +5,7 @@
         <text default="" defaultValue="" desc="" dropdown="" fullname="set userInput To" hidden="false" id="4" name="_setuserInputTo" order="1"/>
         <text default="" defaultValue="" desc="" dropdown="" fullname="UserInput" hidden="false" id="9" name="_UserInput" order="2"/>
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Flower Shard" hidden="false" id="10" name="_FlowerShard" order="3"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="FlowerShard" hidden="false" id="11" name="_FlowerShard2" order="4"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="FlowerShard" hidden="false" id="11" name="_FlowerShard2" order="4"/>
         <blocks/>
         <events>
             <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="1" repeats="true"/>
