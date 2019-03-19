@@ -8,7 +8,7 @@
         <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="FlowerShard" hidden="false" id="11" name="_FlowerShard2" order="4"/>
         <blocks/>
         <events>
-            <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="1" repeats="true"/>
+            <event displayName="Enters Region" enabled="true" id="1" name="event-actor-region" order="1" repeats="false"/>
             <event displayName="Any Key" enabled="true" id="2" name="event-key-any-press-release" order="2" repeats="false"/>
             <event displayName="Drawing" enabled="true" id="3" name="draw" order="3" repeats="true"/>
         </events>
@@ -75,15 +75,17 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="touch floor" hidden="false" id="2" name="_touchfloor" order="1"/>
         <blocks/>
         <events>
-            <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName=" Jump " enabled="true" id="3" name="step" order="9" repeats="true"/>
-            <event displayName="Screen" enabled="true" id="4" name="step" order="7" repeats="true"/>
-            <event displayName="Touch Floor" enabled="true" id="5" name="event-collide-actortogroup" order="15" repeats="false"/>
-            <event displayName="Die in Pit and Reload" enabled="true" id="6" name="step" order="5" repeats="true"/>
-            <event displayName="Camera" enabled="true" id="7" name="init" order="4" repeats="true"/>
-            <event displayName="Keyboard" enabled="true" id="8" name="event-key-press-release" order="13" repeats="true"/>
-            <event displayName="Jumping 2 " enabled="false" id="10" name="step" order="11" repeats="true"/>
-            <event displayName="Type - Type" enabled="true" id="11" name="event-collide-typetotype" order="2" repeats="true"/>
+            <event displayName="Walk" enabled="false" id="1" name="step" order="1" repeats="true"/>
+            <event displayName=" Jump " enabled="true" id="3" name="step" order="11" repeats="true"/>
+            <event displayName="Screen" enabled="true" id="4" name="step" order="9" repeats="true"/>
+            <event displayName="Touch Floor" enabled="true" id="5" name="event-collide-actortogroup" order="17" repeats="false"/>
+            <event displayName="Die in Pit and Reload" enabled="true" id="6" name="step" order="7" repeats="true"/>
+            <event displayName="Camera" enabled="false" id="7" name="init" order="6" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="8" name="event-key-press-release" order="15" repeats="true"/>
+            <event displayName="Jumping 2 " enabled="false" id="10" name="step" order="13" repeats="true"/>
+            <event displayName="Kill Collision" enabled="false" id="11" name="event-collide-typetotype" order="3" repeats="true"/>
+            <event displayName="Constant Movement" enabled="true" id="12" name="step" order="4" repeats="true"/>
+            <event displayName="Created" enabled="true" id="14" name="init" order="18" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
@@ -159,8 +161,8 @@
             <event displayName="Jumping 2 " enabled="false" id="6" name="step" order="8" repeats="true"/>
             <event displayName="Keyboard" enabled="true" id="7" name="event-key-press-release" order="9" repeats="true"/>
             <event displayName="Touch Floor" enabled="true" id="8" name="event-collide-actortogroup" order="10" repeats="false"/>
-            <event displayName="Turning (Left to Right)" enabled="true" id="9" name="step" order="11" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="11" name="event-collide-actortotype" order="3" repeats="true"/>
+            <event displayName="Item PickUp" enabled="true" id="11" name="event-collide-actortotype" order="3" repeats="true"/>
+            <event displayName="Kill Collision" enabled="true" id="12" name="event-collide-typetotype" order="11" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="29" attachedevent="true" class="scripts.ActorEvents_29" classname="scripts.ActorEvents_29" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="18" name="ActorEvents_29" oid="-1" package="scripts." shared="false" type="actor">

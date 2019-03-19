@@ -88,24 +88,20 @@ class ActorEvents_6 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		engine.cameraFollow(actor);
+		actor.setXVelocity(20);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(isKeyDown("left"))
+				if((actor.getX() < 30))
 				{
-					actor.setXVelocity(-15);
+					actor.setXVelocity(10);
 				}
-				else if(isKeyDown("right"))
+				else if((actor.getX() > 215))
 				{
-					actor.setXVelocity(15);
-				}
-				else
-				{
-					actor.setXVelocity(0);
+					actor.setXVelocity(-10);
 				}
 			}
 		});

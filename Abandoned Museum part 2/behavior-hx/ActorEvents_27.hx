@@ -188,6 +188,22 @@ class ActorEvents_27 extends ActorScript
 			}
 		});
 		
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(27).ID, getActorType(6).ID, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(event.thisFromLeft)
+				{
+					recycleActor(actor);
+				}
+				else if(event.thisFromRight)
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

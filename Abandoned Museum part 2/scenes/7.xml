@@ -7,7 +7,7 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="87" id="0" name="End of Level" pts="4,0.0,0.0,0.0,87.0,44.0,87.0,44.0,0.0" r="64" type="box" w="44" x="4750" y="200"/>
+        <region b="64" g="64" h="87" id="0" name="End of Level" pts="4,44.0,0.0,44.0,87.0,0.0,87.0,0.0,0.0" r="64" type="box" w="44" x="4750" y="200"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -39,6 +39,7 @@
         <actor a="0.0" aid="28" c="false" group="8" id="10" name="Flower Shard 28" sx="1.0" sy="1.0" x="1955" y="328" z="0"/>
         <actor a="0.0" aid="29" c="false" group="8" id="10" name="Flower Shard 29" sx="1.0" sy="1.0" x="1986" y="327" z="0"/>
         <actor a="0.0" aid="30" c="false" group="8" id="10" name="Flower Shard 30" sx="1.0" sy="1.0" x="2013" y="327" z="0"/>
+        <actor a="0.0" aid="31" c="false" group="3" id="6" name="Azazel Statue 31" sx="1.0" sy="1.0" x="344" y="107" z="0"/>
     </actors>
     <snippets>
         <s enabled="true" id="16">
