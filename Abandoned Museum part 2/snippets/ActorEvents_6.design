@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <step comment="false" x="0" y="143">
+        <step comment="false" x="64" y="40">
             <group eventID="1" id="-1">
-                <if comment="false" x="11" y="168">
+                <if comment="false" x="75" y="65">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="22" y="206">
+                        <set-dxy comment="false" x="86" y="103">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="-20"/>
@@ -19,9 +19,9 @@
                         <int id="1" val="400"/>
                     </more>
                 </if>
-                <else-if comment="false" x="11" y="245">
+                <else-if comment="false" x="75" y="142">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="22" y="283">
+                        <set-dxy comment="false" x="86" y="180">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="20"/>
@@ -241,16 +241,6 @@
         </step>
     </group>
     <group eventID="6" id="-1"/>
-    <group eventID="7" id="0">
-        <init comment="false" x="27" y="79">
-            <group eventID="7" id="-1">
-                <camera-follow comment="false" x="38" y="104">
-                    <ACTOR eid="this" id="0"/>
-                </camera-follow>
-            </group>
-        </init>
-    </group>
-    <group eventID="7" id="-1"/>
     <group eventID="8" id="0">
         <event-key-press-release comment="false" x="0" y="106">
             <group eventID="8" id="-1">
@@ -353,11 +343,11 @@
     </group>
     <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
-        <step comment="false" x="8" y="169">
+        <step comment="false" x="61" y="34">
             <group eventID="12" id="-1">
-                <if comment="false" x="19" y="194">
+                <if comment="false" x="72" y="59">
                     <group eventID="12" id="-1">
-                        <set-dxy comment="false" x="30" y="232">
+                        <set-dxy comment="false" x="83" y="97">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="10"/>
@@ -371,9 +361,9 @@
                         <int id="1" val="30"/>
                     </less>
                 </if>
-                <else-if comment="false" x="19" y="271">
+                <else-if comment="false" x="72" y="136">
                     <group eventID="12" id="-1">
-                        <set-dxy comment="false" x="30" y="309">
+                        <set-dxy comment="false" x="83" y="174">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="-10"/>
