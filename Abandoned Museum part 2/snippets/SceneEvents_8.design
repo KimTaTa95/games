@@ -68,4 +68,36 @@
         </if>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <draw comment="false" x="0" y="127">
+            <group eventID="3" id="-1">
+                <draw-text comment="false" x="11" y="152">
+                    <int id="0" val="PRESS &amp;lt;SPACE&amp;gt; TO START"/>
+                    <int id="1" val="225"/>
+                    <int id="2" val="453"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <step comment="false" x="0" y="158">
+            <group eventID="4" id="-1">
+                <if comment="false" x="11" y="183">
+                    <group eventID="4" id="-1">
+                        <scene-change-through comment="false" x="22" y="216">
+                            <scene eid="0" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="2"/>
+                        </scene-change-through>
+                    </group>
+                    <keystate comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <control eid="7" id="1"/>
+                    </keystate>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
