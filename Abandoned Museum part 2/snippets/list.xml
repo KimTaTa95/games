@@ -173,7 +173,7 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_8" classname="scripts.SceneEvents_8" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="19" name="SceneEvents_8" oid="-1" package="scripts." sceneid="8" shared="false" type="scene">
         <blocks/>
         <events>
-            <event displayName="Updating" enabled="false" id="1" name="step" order="1" repeats="false"/>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="false"/>
             <event displayName="Drawing" enabled="false" id="2" name="draw" order="4" repeats="true"/>
             <event displayName="Display start message" enabled="true" id="3" name="draw" order="2" repeats="true"/>
             <event displayName="Check for keypress" enabled="true" id="4" name="step" order="3" repeats="true"/>

@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,80 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_0 extends SceneScript
+class ActorEvents_33 extends ActorScript
 {
-	public var _Radius:Float;
-	public var _setuserInputTo:String;
-	public var _UserInput:String;
-	public var _FlowerShard:Actor;
-	public var _FlowerShard2:Float;
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
-		nameMap.set("Radius", "_Radius");
-		_Radius = 0.0;
-		nameMap.set("set userInput To", "_setuserInputTo");
-		_setuserInputTo = "";
-		nameMap.set("UserInput", "_UserInput");
-		_UserInput = "";
-		nameMap.set("Flower Shard", "_FlowerShard");
-		nameMap.set("FlowerShard", "_FlowerShard2");
-		_FlowerShard2 = 0.0;
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== Specific Actor ======================== */
-		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && sameAs(getActor(1), a))
-			{
-				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
-			}
-		});
-		
-		/* =========================== Any Key ============================ */
-		addAnyKeyPressedListener(function(event:KeyboardEvent, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((event.keyCode == Key.ENTER))
-				{
-					/* THIS IS WHERE YOU WOULD ACCEPT THE TEXT */
-				}
-				else if((event.keyCode == Key.BACKSPACE))
-				{
-					_UserInput = ("" + _UserInput).substring(Std.int(0), Std.int((("" + _UserInput).length - 1)));
-					propertyChanged("_UserInput", _UserInput);
-				}
-				else
-				{
-					if(isShiftDown())
-					{
-						_UserInput = (("" + _UserInput) + ("" + ("" + charFromCharCode(event.charCode)).toUpperCase()));
-						propertyChanged("_UserInput", _UserInput);
-					}
-					else
-					{
-						_UserInput = (("" + _UserInput) + ("" + charFromCharCode(event.charCode)));
-						propertyChanged("_UserInput", _UserInput);
-					}
-				}
-			}
-		});
-		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.drawString("" + Engine.engine.getGameAttribute("Flower Shard"), 25, 15);
-			}
-		});
 		
 	}
 	

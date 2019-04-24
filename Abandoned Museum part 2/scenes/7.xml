@@ -11,7 +11,7 @@
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="4" id="27" name="V 1" sx="2.1" sy="2.2222223" x="824" y="264" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="4" id="27" name="V 1" sx="2.1" sy="2.2222223" x="14" y="134" z="0"/>
         <actor a="0.0" aid="65" c="false" group="3" id="6" name="Azazel Statue 65" sx="1.0" sy="1.0" x="911" y="657" z="0"/>
         <actor a="0.0" aid="66" c="false" group="3" id="6" name="Azazel Statue 66" sx="1.0" sy="1.0" x="1119" y="662" z="0"/>
         <actor a="0.0" aid="67" c="false" group="3" id="6" name="Azazel Statue 67" sx="1.0" sy="1.0" x="1326" y="668" z="0"/>
