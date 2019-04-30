@@ -13,7 +13,7 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="3">
+    <group eventID="1" id="1">
         <scene-reload-color comment="false" x="164" y="145">
             <int id="0" val="2"/>
             <int id="1" val="0.5"/>
@@ -23,7 +23,7 @@
             <color b="0" g="0" id="5" r="0"/>
         </scene-reload-color>
     </group>
-    <group eventID="1" id="4">
+    <group eventID="1" id="2">
         <scene-change-color comment="false" x="55" y="353">
             <scene id="0"/>
             <int id="1" val="2"/>

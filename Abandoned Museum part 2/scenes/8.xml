@@ -7,19 +7,7 @@
     <joints/>
     <regions/>
     <terrainRegions/>
-    <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="31" name="Start Button 1" sx="1.0" sy="1.0" x="92" y="142" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="3" id="31" name="Start Button 2" sx="1.0" sy="1.0" x="-39" y="-50" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="31" name="Start Button 3" sx="1.0" sy="1.0" x="283" y="80" z="0"/>
-        <actor a="0.0" aid="4" c="false" group="3" id="31" name="Start Button 4" sx="1.0" sy="1.0" x="-99" y="96" z="0"/>
-        <actor a="0.0" aid="5" c="false" group="3" id="31" name="Start Button 5" sx="1.0" sy="1.0" x="280" y="78" z="0"/>
-        <actor a="0.0" aid="6" c="false" group="3" id="31" name="Start Button 6" sx="1.0" sy="1.0" x="-59" y="-237" z="0"/>
-        <actor a="0.0" aid="7" c="false" group="3" id="31" name="Start Button 7" sx="1.0" sy="1.0" x="-181" y="-149" z="0"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="31" name="Start Button 8" sx="1.0" sy="1.0" x="285" y="155" z="0"/>
-        <actor a="0.0" aid="9" c="false" group="3" id="31" name="Start Button 9" sx="1.0" sy="1.0" x="-76" y="-24" z="0"/>
-        <actor a="0.0" aid="10" c="false" group="3" id="31" name="Start Button 10" sx="1.0" sy="1.0" x="71" y="155" z="0"/>
-        <actor a="0.0" aid="11" c="false" group="3" id="31" name="Start Button 11" sx="1.0" sy="1.0" x="400" y="-151" z="0"/>
-    </actors>
+    <actors/>
     <snippets/>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
