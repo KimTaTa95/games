@@ -176,7 +176,6 @@
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="false"/>
             <event displayName="Drawing" enabled="false" id="2" name="draw" order="4" repeats="true"/>
             <event displayName="Display start message" enabled="true" id="3" name="draw" order="2" repeats="true"/>
-            <event displayName="Check for keypress" enabled="true" id="4" name="step" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="31" attachedevent="true" class="scripts.ActorEvents_31" classname="scripts.ActorEvents_31" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="20" name="ActorEvents_31" oid="-1" package="scripts." shared="false" type="actor">
@@ -184,6 +183,10 @@
         <events/>
     </snippet>
     <snippet actorid="33" attachedevent="true" class="scripts.ActorEvents_33" classname="scripts.ActorEvents_33" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="21" name="ActorEvents_33" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="36" attachedevent="true" class="scripts.ActorEvents_36" classname="scripts.ActorEvents_36" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="22" name="ActorEvents_36" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
     </snippet>
