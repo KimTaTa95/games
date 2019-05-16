@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-type-create-kill comment="false" x="0" y="201">
+            <group eventID="1" id="-1">
+                <dolater comment="false" x="11" y="233">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="22" y="260">
+                            <actortype eid="27" id="0"/>
+                            <int id="1" val="20"/>
+                            <int id="2" val="30"/>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                    </group>
+                    <int id="0" val="2"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="1"/>
+            <actortype eid="27" id="1"/>
+        </event-type-create-kill>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

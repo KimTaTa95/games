@@ -74,7 +74,7 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="2">
+    <group eventID="1" id="1">
         <if comment="false" x="821" y="282">
             <group eventID="1" id="-1">
                 <set-dxy comment="false" x="832" y="315">
@@ -111,7 +111,7 @@
             </group>
         </else>
     </group>
-    <group eventID="1" id="4">
+    <group eventID="1" id="2">
         <else comment="false" x="615" y="164">
             <group eventID="1" id="-1"/>
         </else>

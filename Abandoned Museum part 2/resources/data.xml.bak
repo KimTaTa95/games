@@ -225,9 +225,10 @@
         <tile collision="-1" data="" durations="100" frames="98" id="98" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="99" id="99" order="-1"/>
     </tileset>
+    <background atlasID="0" desc="" durations="" dx="-0.0" dy="-0.0" height="0" id="39" name="Inside" numframes="0" oid="-1" repeats="false" resized="false" shared="false" width="0" xpf="1.0" ypf="1.0"/>
     <tileset across="20" atlasID="0" desc="" down="25" id="24" name="Interior" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
-        <tile collision="0" data="" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="3" data="" durations="100" frames="1" id="1" order="-1"/>
         <tile collision="0" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="0" data="" durations="100" frames="3" id="3" order="-1"/>
         <tile collision="0" data="" durations="100" frames="4" id="4" order="-1"/>
@@ -734,8 +735,8 @@
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="20" name="Middle of Nowhere" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="0.8" ypf="1.0"/>
     <tileset across="10" atlasID="0" desc="" down="10" id="26" name="Museum" oid="-1" shared="false" th="32" tw="32">
         <tile collision="7" data="" durations="100" frames="0" id="0" order="-1"/>
-        <tile collision="-1" data="" durations="100" frames="1" id="10" order="-1"/>
-        <tile collision="-1" data="" durations="100" frames="2" id="20" order="-1"/>
+        <tile collision="1" data="" durations="100" frames="1" id="10" order="-1"/>
+        <tile collision="8" data="" durations="100" frames="2" id="20" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="3" id="30" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="4" id="40" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="5" id="50" order="-1"/>
