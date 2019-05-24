@@ -732,6 +732,17 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="5" name="Jungkook" shared="false" width="16"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="23" fixedrot="false" fric="0.2" gid="3" id="40" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Magic Bow" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="41" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="41" name="Magic Bow" shared="false" width="56">
+        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="168" id="0" loop="true" name="Left" numframes="20" originx="28" originy="21" sync="false" version="2" width="280">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="168" id="1" loop="true" name="Right" numframes="20" originx="28" originy="21" sync="false" version="2" width="280">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="20" name="Middle of Nowhere" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="0.8" ypf="1.0"/>
     <tileset across="10" atlasID="0" desc="" down="10" id="26" name="Museum" oid="-1" shared="false" th="32" tw="32">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>

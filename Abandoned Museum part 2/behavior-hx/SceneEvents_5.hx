@@ -70,7 +70,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_7 extends SceneScript
+class SceneEvents_5 extends SceneScript
 {
 	public var _UserInput:String;
 	
@@ -116,21 +116,12 @@ class SceneEvents_7 extends SceneScript
 			}
 		});
 		
-		/* ========================= When Drawing ========================= */
-		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				g.drawString("" + Engine.engine.getGameAttribute("Flower Shard"), 25, 15);
-			}
-		});
-		
 		/* ======================== Specific Actor ======================== */
 		addActorEntersRegionListener(getRegion(0), function(a:Actor, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && sameAs(getActor(1), a))
 			{
-				switchScene(GameModel.get().scenes.get(2).getID(), null, createCrossfadeTransition(2));
+				switchScene(GameModel.get().scenes.get(7).getID(), null, createCrossfadeTransition(2));
 			}
 		});
 		
