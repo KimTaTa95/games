@@ -732,15 +732,32 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="5" name="Jungkook" shared="false" width="16"/>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="24" fixedrot="false" fric="0.2" gid="3" id="42" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Magic Arrow" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="43" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="43" name="Magic Arrow" shared="false" width="56">
+        <anim across="1" down="1" durations="100" height="42" id="0" loop="true" name="Right" numframes="1" originx="28" originy="21" sync="false" version="2" width="56">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="42" id="1" loop="true" name="Left" numframes="1" originx="28" originy="21" sync="false" version="2" width="56">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="23" fixedrot="false" fric="0.2" gid="3" id="40" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Magic Bow" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="41" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="41" name="Magic Bow" shared="false" width="56">
-        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="168" id="0" loop="true" name="Left" numframes="20" originx="28" originy="21" sync="false" version="2" width="280">
+    <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="42" id="41" name="Magic Bow" shared="false" width="56">
+        <anim across="1" down="1" durations="100" height="42" id="0" loop="true" name="Left" numframes="1" originx="28" originy="21" sync="false" version="2" width="56">
             <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="168" id="1" loop="true" name="Right" numframes="20" originx="28" originy="21" sync="false" version="2" width="280">
+        <anim across="1" down="1" durations="100" height="42" id="1" loop="true" name="Right" numframes="1" originx="28" originy="21" sync="false" version="2" width="56">
             <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100" height="126" id="2" loop="true" name="Bow drawn right" numframes="10" originx="28" originy="21" sync="false" version="2" width="224">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Bow drawn right" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100" height="126" id="3" loop="true" name="Bow drawn left" numframes="10" originx="28" originy="21" sync="false" version="2" width="224">
+            <poly data="4,0,0,56,0,56,42,0,42" density="0.1" fric="0.2" gid="-1000" id="0" name="Bow drawn right" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="20" name="Middle of Nowhere" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="0.8" ypf="1.0"/>
@@ -846,6 +863,9 @@
         <tile collision="-1" data="" durations="100" frames="98" id="89" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="99" id="99" order="-1"/>
     </tileset>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="10" fixedrot="true" fric="0.2" gid="3" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Pieta Statue" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
+        <snippets/>
+    </actor>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="13" fixedrot="true" fric="0.2" gid="3" id="14" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="Red Apple" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="15" static="false">
         <snippets/>
     </actor>
@@ -1001,11 +1021,18 @@
         <anim across="1" down="1" durations="100" height="37" id="3" loop="true" name="Stance Left" numframes="1" originx="10" originy="18" sync="false" version="2" width="21">
             <poly data="4,0,0,21,0,21,37,0,37" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
+        <anim across="1" down="1" durations="100" height="37" id="4" loop="true" name="Hand Left" numframes="1" originx="10" originy="18" sync="false" version="2" width="21">
+            <poly data="4,0,0,21,0,21,37,0,37" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="37" id="5" loop="true" name="Hand Right" numframes="1" originx="10" originy="18" sync="false" version="2" width="21">
+            <poly data="4,0,0,21,0,21,37,0,37" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
+        </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="true" fric="0.2" gid="3" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Virgin Mary Statue" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
-        <snippets/>
-    </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="9" name="Virgin Mary Statue" shared="false" width="16"/>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="9" name="Virgin Mary Statue" shared="false" width="16">
+        <anim across="1" down="1" durations="100" height="1" id="0" loop="true" name="Animation 0" numframes="1" originx="250" originy="250" sync="false" version="2" width="1">
+            <poly data="4,0,0,500,0,500,500,0,500" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="360" id="35" name="Wings" numframes="1" oid="-1" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="22" fixedrot="false" fric="0.2" gid="3" id="36" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="WINGS" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="37" static="false">
         <snippets/>
